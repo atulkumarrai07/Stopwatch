@@ -36,8 +36,8 @@ class Stopwatch
   {
     let minutes = Int(elapsedTime) / 60
     let seconds = Int(elapsedTime) % 60
-    let secondsFraction = (elapsedTime.truncatingRemainder(dividingBy: 60))/1
-    return String(format: "%02i:%02i.%02i",minutes,Int(seconds),Int(secondsFraction))
+    let secondsFraction = (((elapsedTime)*10).truncatingRemainder(dividingBy: 10))
+    return String(format: "%02d:%02d.%d",minutes,Int(seconds),Int(secondsFraction))
     //return String(elapsedTime)
   }
   
